@@ -12,7 +12,7 @@ class inventario:
     proveedor=["De moda S.A.    ","Lontano Jeans    ","Chiquitines S.A.","Chiquitines S.A.","Flor de Liz S.A.","7 Machos S.A.    ","Picaros S.A.    ","Picaros S.A    ","ExtremeCR S.A.","Converse Int S.A."]
     bodega=[34,23,45,12,31,20,27,29,15,19]   
 
-    def menu(self):
+    def menu(self):             #esto ya esta listo
         os.system("cls")
         print("************************************************************************")
         print("              Bienvenido al Menu de inventario                          ")
@@ -168,5 +168,5 @@ class inventario:
             print ("Gracias por utilizar nuestro sistema")
             print("************************************************************************")
 
-existencia=inventario()
-existencia.menu()
+#existencia=inventario()
+#existencia.menu()
