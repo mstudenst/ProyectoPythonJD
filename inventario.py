@@ -1,6 +1,9 @@
+#clase inventario del grupo Nº3, Modulo 2 Junior Developer
+
 import os
 import sys
 
+# esta es la clase inventario
 class inventario:
 
     cod=["101","102","103","104","105","106","107","108","109","110"]
