@@ -1,3 +1,5 @@
+#clase inventario del grupo Nº3, Modulo 2 Junior Developer
+
 import os
 import sys
 
