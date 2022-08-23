@@ -8,6 +8,7 @@ class Usuario():
     puestos=["Administrador","Contador","Auxiliar contable"]
     contraseñas=["Admin123","Conta123","Auxcont123"]
 
+
     puestos={}
     contraseñas={}
     
