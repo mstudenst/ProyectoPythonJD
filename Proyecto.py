@@ -13,10 +13,6 @@ class Usuario():
     
     administrativos
     
-    
-    
-    
-    
     numerodeUsuarios = 3
 
     def __init__(self, puestos, contraseñas):
