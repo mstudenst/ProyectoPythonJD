@@ -168,5 +168,5 @@ class inventario:
             print ("Gracias por utilizar nuestro sistema")
             print("************************************************************************")
 
-existencia=inventario()
-existencia.menu()
+#existencia=inventario()
+#existencia.menu()
