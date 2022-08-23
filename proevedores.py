@@ -9,7 +9,7 @@ class proveedores:
         self.__correo=Correo
         self.__nacionalidad=True
         self.__devoluciones=True
-        self.diccionario_proveedor=dict
+        self.diccionario_proveedor=dict # esto es nuevo y no se esta usando
 
     def diccinarioProveerdor(self,dicProv):
         self.diccinarioProveerdor=dicProv
