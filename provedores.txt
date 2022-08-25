@@ -1,0 +1,10 @@
+8000,ARENA,Federico Barquelo Solis,65479542,carlossolis@gmail.com
+8001,RUSELL,Monica Campos Espinoza,62047855,monicampos@gmail.com
+8002,CK,Marcos Hernadez Porraz,88745244,marchernade@gmail.com
+8003,ACTITUD,Alejandro Corrales Moralez,88745250,alejandrocora52@gmail.com
+8004,LEVIS,Camila Rodriguez Abarca,65764743,camilabarca@gmail.com
+8005,NIKE,Sofia Vargas Diaz,88796641,sofidiaz@gmail.com
+8006,PEPE,Roberto Martinez Hernandez,78906755,robertomtz@gmail.com
+8007,ADIDAS,Juan Perez Perez,87465634,perezjuan@gmail.com
+8008,VOLKOM,Tatiana Abarca Reyes,65748475,taniara@gmail.com
+8009,REEBOK,Maria Salas Duran,80529475,mmariasalas@gmail.com

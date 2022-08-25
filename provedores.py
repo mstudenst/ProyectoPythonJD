@@ -16,7 +16,7 @@ class proveedores:
         decimodato=("8009,REEBOK,Maria Salas Duran,80529475,mmariasalas@gmail.com\n")
             
         registro.append(primerdato) #Agrega  los datos  en un orden
-        registro.append(segundodato) #append agrega los datos de texto
+        registro.append(segundodato)#append agrega los datos de texto
         registro.append(tercerdato)
         registro.append(cuartodato)
         registro.append(quintodato)
