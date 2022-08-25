@@ -36,11 +36,27 @@ class proveedores:
         print(datosProveedor.read())
         datosProveedor.close
             
-    print("\n""********************Actualización de los proeevedores********************""\n")    
+    print("\n""********************Lista de los proeevedores********************""\n")    
 #actualizar_proveedor() # se mostrara por pantalla los nuevos datos
     imprimir_proveedores()
 
-class proveedores:
+    def imprecion_Agrega_editar(): #Menu de opciones para proveedores
+        print("\n\t\t\t\t\t""Bienvenido""\t\t\t\t\t\n")
+        print("\nOpciones disponibles\n")
+        print("1\t\t\tAgregar Proveedor\n2\t\t\tEditar Proveedor\n3\t\t\tVer lista de los Proveedores")
+    imprecion_Agrega_editar()
+
+    def seleccion_de_opcion():
+        desicion=input("digite una opción ")
+        
+        if desicion == 1:
+            print(imprimir_proveedores())
+        elif desicion ==2:
+            print(imprimir_proveedores())
+        elif desicion ==3:
+            print(imprimir_proveedores())
+    
+    seleccion_de_opcion()
     
     def __init__(self): #Modo Constructor, contiene en sus atributos:id,nombre,representante,telefono y correo.
         self._identidad=int(input("El codigo de proveedor es "))
@@ -89,7 +105,7 @@ print(rusell.estado())
 calvin=proveedores()#tercer objeto 
 calvin.origen_proveedor(True)
 calvin.devolucion_dano(True)
-print(calvin.estado())
+calvin.estado()
 
 
 actitud=proveedores()#cuarto objeto
@@ -101,7 +117,6 @@ levis=proveedores()
 levis.origen_proveedor(False)
 levis.devolucion_dano(True)
                                         # diccionario final con llaves y valores
-
 #diccionario_proveedor.items
 #diccionario_proveedor.values
 #diccionario_proveedor.keys  
