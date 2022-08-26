@@ -11,12 +11,11 @@ lista_Correos=["carlossolis@gmail.com","monicampos@gmail.com","marchernade@gmail
 def listas_proeevedores():
     for a,b,c,d,e in zip(lista_Id,lista_Nombres,lista_Representantes,lista_Telefonos,lista_Correos):
         print(a,"\t",b,"\t",c,"\t",d,"\t",e)"""
+#Programa que permite leer agregar y editar proveedores de un documento de texto Junior Developer
 
-def imprimir_proveedores():#Impresiónn de los proeevedores.
-    
+def imprimir_proveedores():#Impresiónn de los proeevedore actuales.
     datosProveedor=open("provedores.txt","r")
     print(datosProveedor.read())
-     
     datosProveedor.close
         
 def imprecion_Menu(): #Menú de opciones para proveedores
@@ -24,8 +23,8 @@ def imprecion_Menu(): #Menú de opciones para proveedores
     print("\nOpciones disponibles\n")
     print("1\t\t\tAgregar Proveedor\n2\t\t\tEditar Proveedor\n")
 
-imprecion_Menu() #Rotúlos del Menú
-print("\n""\t\t\t\t\t""Provedores de Ropa""\t\t\t\t\t""\n")
+imprecion_Menu() 
+print("\n""\t\t\t\t\t""Provedores""\t\t\t\t\t""\n")#Rotúlos del Menú
 print("\n""Identidad","Nombre","\t","Representante","\t\t","Telefono","\t","Correo""\n")
 imprimir_proveedores()
 
@@ -47,7 +46,6 @@ def agregar_proveedor():
     datosProveedor.writelines(registro)
     datosProveedor.close() #Se cierra el documento luego de los cambios.
 
-
 def editar_provedor(): #Permite editar proveedor
     datosProveedor=open("provedores.txt","r+")
     registro=datosProveedor.readlines()
@@ -58,8 +56,6 @@ def editar_provedor(): #Permite editar proveedor
         datosProveedor.writelines(registro)
         datosProveedor.close() #Se cierra el documento luego de los cambios.
         
-
-
 def seleccion_de_Menu(): #Seleccion del menu del usuario de acuerdo a la opcines disponibles.
     
     print("\n\n""*********************************************************************************""\n\n")
@@ -70,11 +66,10 @@ def seleccion_de_Menu(): #Seleccion del menu del usuario de acuerdo a la opcines
 
     elif desicion =="2":
         return editar_provedor()
-
-    else: 
     
+    else: 
         return seleccion_de_Menu()
-print("Usted selecciono la opcion: ",seleccion_de_Menu()) # lo que selecciono el usuario.
+seleccion_de_Menu() # Actualización de proveedor.
 os.system("cls")
 
     
