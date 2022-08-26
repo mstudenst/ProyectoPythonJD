@@ -73,9 +73,14 @@ def desicion_de_Menu():
     
     if seleccion_de_Menu =="1":
         print("agregar")
+    return agregar_proveedor()
+
+def desicion_de_Menu_2():
+
     if seleccion_de_Menu =="2":
         print ("editar")
     
-    return agregar_proveedor(),editar_provedor()
+    return editar_provedor()
 desicion_de_Menu()
+desicion_de_Menu_2()
 
