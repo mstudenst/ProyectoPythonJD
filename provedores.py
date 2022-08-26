@@ -20,12 +20,14 @@ def imprimir_proveedores():
     datosProveedor.close
         
 def imprecion_Menu(): #Menu de opciones para proveedores
-    print("\n\t\t\t\t\t""Bienvenido""\t\t\t\t\t\n")
+    print("\n\t\t\t""Bienvenido""\t\t\n")
     print("\nOpciones disponibles\n")
-    print("1\t\t\tAgregar Proveedor\n2\t\t\tEditar Proveedor\n")
+    print("1\tAgregar Proveedor\n2\tEditar Proveedor\n")
 
 imprecion_Menu() 
-print("\n""\t\t\t\t\t""Provedores de Ropa""\t\t\t\t\t""\n")
+print("\n""*********************************************************************************""\n")
+print("\n""\t\t\t""Provedores de Ropa""\t\t\t""\n")
+print("\n""*********************************************************************************""\n")
 print("\n""Identidad","Nombre","\t","Representante","\t\t","Telefono","\t","Correo""\n")
 imprimir_proveedores()
 
@@ -61,15 +63,19 @@ def editar_provedor(): #Permite editar proveedor
 #editar_provedor()
 
 def seleccion_de_Menu(): #Seleccion del menu del usuario
+    print("\n\n""*********************************************************************************""\n\n")
     desicion=input("digite una opción ")
     
 
     return desicion
 print("Usted selecciono la opcion: ",seleccion_de_Menu()) # lo que selecciono el usuario
 
-seleccion_de_Menu
+def desicion_de_Menu():
+    
+    if seleccion_de_Menu()==1:
+        print(agregar_proveedor)
+    elif seleccion_de_Menu() ==2:
+        print (editar_provedor)
+    return desicion_de_Menu
 
-if seleccion_de_Menu==1:
-    print(agregar_proveedor)
-elif seleccion_de_Menu ==2:
-    print (editar_provedor)
+desicion_de_Menu()
