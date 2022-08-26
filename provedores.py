@@ -16,7 +16,7 @@ def imprimir_proveedores():
     
     datosProveedor=open("provedores.txt","r")
     print(datosProveedor.read())
-    print("\n""Identidad","Nombre","\t","Representante","\t\t","Telefono","\t","Correo""\n") #Impresiónn de los proeevedores.
+     #Impresiónn de los proeevedores.
     datosProveedor.close
         
 def imprecion_Menu(): #Menu de opciones para proveedores
@@ -26,26 +26,13 @@ def imprecion_Menu(): #Menu de opciones para proveedores
 
 imprecion_Menu() 
 print("\n""\t\t\t\t\t""Provedores de Ropa""\t\t\t\t\t""\n")
+print("\n""Identidad","Nombre","\t","Representante","\t\t","Telefono","\t","Correo""\n")
 imprimir_proveedores()
 
-datos_de_usuario=[]
-datos_de_usuario1=[]
-
-def seleccion_de_Menu():
-    desicion=input("digite una opción ")
-
-    if desicion == 1:
-        return "usted va agregar nuevos datos"
-        
-    elif desicion == 2:
-        return "Usted va a editar proveedores"
-    
-print(seleccion_de_Menu())       
-       
 def agregar_proveedor():
-
+    
     datosProveedor=open("provedores.txt","a+") #Leer escribe y agrega texto al documento
-    registro=datosProveedor.readlines() #Almacena una lista
+    registro=datosProveedor.readlines() 
     Identidad=str(input("El codigo de proveedor es: ""\n"))
     Nombre=input("cual es el nonbre del proveedor: ""\n")
     Representante=input("Digite el representante: ""\n")
@@ -61,15 +48,28 @@ def agregar_proveedor():
     datosProveedor.close() #Se cierra el documento luego de los cambios
 #agregar_proveedor()
 
-def editar_provedor():
+def editar_provedor(): #Permite editar proveedor
     datosProveedor=open("provedores.txt","r+")
     registro=datosProveedor.readlines()
-    Identidad=input("El codigo de proveedor es ")
-    #registro.append(Identidad)
-    
-    registro(registro.index(Identidad))
-    datosProveedor.seek(0) #posicion del  inicio del texto
-    datosProveedor.writelines(registro)
-    datosProveedor.close() #Se cierra el documento luego de los cambios
+    Identidad=str(input("El codigo de proveedor es "))
+   
+    for ide in (registro):
+        ide(registro.index(Identidad))
+        datosProveedor.writelines(registro)
+        datosProveedor.close() #Se cierra el documento luego de los cambios
+        
+#editar_provedor()
 
-editar_provedor()
+def seleccion_de_Menu(): #Seleccion del menu del usuario
+    desicion=input("digite una opción ")
+    
+
+    return desicion
+print("Usted selecciono la opcion: ",seleccion_de_Menu()) # lo que selecciono el usuario
+
+seleccion_de_Menu
+
+if seleccion_de_Menu==1:
+    print(agregar_proveedor)
+elif seleccion_de_Menu ==2:
+    print (editar_provedor)
