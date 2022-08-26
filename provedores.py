@@ -8,8 +8,6 @@ lista_Representantes=["Federico Barquelo Solis","Monica Campos Espinoza","Marcos
 lista_Telefonos=["65479542","62047855","88745244","88745250","65764743","88796641","78906755","87465634","65748475","80529475"]
 lista_Correos=["carlossolis@gmail.com","monicampos@gmail.com","marchernade@gmail.com","alejandrocora52@gmail.com","camilabarca@gmail.com","sofidiaz@gmail.com","robertomtz@gmail.com","perezjuan@gmail.com","taniara@gmail.com","mmariasalas@gmail.com"]
 
-
-print("\n""Identidad","Nombre","\t","Representante","\t\t","Telefono","\t","Correo""\n") #Impresiónn de los proeevedores.
 def listas_proeevedores():
     for a,b,c,d,e in zip(lista_Id,lista_Nombres,lista_Representantes,lista_Telefonos,lista_Correos):
         print(a,"\t",b,"\t",c,"\t",d,"\t",e)
@@ -18,6 +16,7 @@ def imprimir_proveedores():
     
     datosProveedor=open("provedores.txt","r")
     print(datosProveedor.read())
+    print("\n""Identidad","Nombre","\t","Representante","\t\t","Telefono","\t","Correo""\n") #Impresiónn de los proeevedores.
     datosProveedor.close
         
 def imprecion_Menu(): #Menu de opciones para proveedores
@@ -36,7 +35,7 @@ def seleccion_de_Menu():
     desicion=input("digite una opción ")
 
     if desicion == 1:
-        return "usted va agregar proveedores"
+        return "usted va agregar nuevos datos"
         
     elif desicion == 2:
         return "Usted va a editar proveedores"
@@ -47,11 +46,11 @@ def agregar_proveedor():
 
     datosProveedor=open("provedores.txt","a+") #Leer escribe y agrega texto al documento
     registro=datosProveedor.readlines() #Almacena una lista
-    Identidad=str(input("El codigo de proveedor es "))
-    Nombre=input("cual es el nonbre del proveedor ")
-    Representante=input("Digite el representante ")
-    Telefono=input("Digite el teléfono ")
-    Correo=input("El correo electrico es ")
+    Identidad=str(input("El codigo de proveedor es: ""\n"))
+    Nombre=input("cual es el nonbre del proveedor: ""\n")
+    Representante=input("Digite el representante: ""\n")
+    Telefono=input("Digite el teléfono: ""\n")
+    Correo=input("El correo electrico es: ""\n")
     registro.append(Identidad) #Agrega  los datos  en un orden append agrega los datos de texto
     registro.append(Nombre)
     registro.append(Representante)
@@ -60,10 +59,17 @@ def agregar_proveedor():
     datosProveedor.seek(0) #posicion del  inicio del texto
     datosProveedor.writelines(registro)
     datosProveedor.close() #Se cierra el documento luego de los cambios
-agregar_proveedor()
+#agregar_proveedor()
 
 def editar_provedor():
-    datosProveedor=open("provedores.txt","w")
-    registro=datosProveedor.write
-    Identidad=str(input("El codigo de proveedor es "))
+    datosProveedor=open("provedores.txt","r+")
+    registro=datosProveedor.readlines()
+    Identidad=input("El codigo de proveedor es ")
+    #registro.append(Identidad)
     
+    registro(registro.index(Identidad))
+    datosProveedor.seek(0) #posicion del  inicio del texto
+    datosProveedor.writelines(registro)
+    datosProveedor.close() #Se cierra el documento luego de los cambios
+
+editar_provedor()
